@@ -1,0 +1,15 @@
+@import "../../styles/variables";
+
+.link {
+  font-size: $base-font-size;
+}
+.add-btn {
+  display: flex;
+  align-items: center;
+  background-color: $primary;
+}
+@media (max-width: 600px) {
+  .link {
+    padding: calc($base-font-size / 2);
+  }
+}

@@ -1,0 +1,52 @@
+// theme colors
+$primary: #007bff !default;
+$secondary: #1ac886 !default;
+$error: #d32752 !default;
+$info: #f6c31c !default;
+$white: #ffffff;
+$black: #0000;
+
+// spacing
+$base-padding: 0.75rem !default;
+$base-margin: 0.75rem !default;
+
+// borders
+$base-border-thickness: 1px !default;
+$base-border-radius: 20px !default;
+
+// box-shadow
+$base-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1) !default;
+
+// font sizes
+$base-font-size: 1rem !default;
+$font-size-sm: $base-font-size * 0.75 !default;
+$font-size-lg: $base-font-size * 1.5 !default;
+$font-size-xl: $base-font-size * 2 !default;
+$font-size-xxl: $base-font-size * 3 !default;
+
+// Breakpoints (based on popular screen sizes)
+$breakpoint-small: 576px; // Small devices (phones)
+$breakpoint-medium: 768px; // Medium devices (tablets)
+$breakpoint-large: 992px; // Large devices (desktops)
+$breakpoint-xlarge: 1200px; // Extra large devices (large desktops)
+
+// Mixin for media queries
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == small {
+    @media (max-width: #{$breakpoint-small}) {
+      @content;
+    }
+  } @else if $breakpoint == medium {
+    @media (max-width: #{$breakpoint-medium}) {
+      @content;
+    }
+  } @else if $breakpoint == large {
+    @media (max-width: #{$breakpoint-large}) {
+      @content;
+    }
+  } @else if $breakpoint == xlarge {
+    @media (max-width: #{$breakpoint-xlarge}) {
+      @content;
+    }
+  }
+}

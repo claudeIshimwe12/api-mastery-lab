@@ -1,0 +1,37 @@
+<div class="products-container" *ngIf="paginatedPosts.length > 1; else loader">
+  <div *ngFor="let post of paginatedPosts" class="product-card">
+    <div class="content-box" (click)="onPostClick(post.id, $event)">
+      <h1 class="content-heading">{{ post.title }}</h1>
+      <p class="content-paragraph">{{ post.body }}</p>
+      <div>
+        <button (click)="openEditModal($event, post.id)" class="z-50">
+          Edit
+        </button>
+        <button (click)="delete(post.id)" class="z-50">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #loader>
+  <div>
+    <h1>Loading...</h1>
+  </div>
+</ng-template>
+
+@if (error) {
+  <h1>Oops!😒, Something went wrong!</h1>
+}
+
+<app-paginator
+  [posts]="posts"
+  (nextPage)="nextPage()"
+  (previousPage)="previousPage()"
+  (setPage)="setPage($event)"
+></app-paginator>
+
+<app-edit-modal
+  *ngIf="showEditModal"
+  [post]="selectedPost"
+  (modalClosed)="closeEditModal()"
+></app-edit-modal>
