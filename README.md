@@ -1,6 +1,6 @@
 # ApiMasteryLab
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.6.
+### You can preview the live demo by following this link [Live Demo](https://beautiful-sunflower-b80d46.netlify.app/)
 
 ## Development server
 
