@@ -1,0 +1,23 @@
+<div class="modal-overlay" (click)="closeModal()"></div>
+<div class="modal-content">
+  <h2>Edit Post</h2>
+  <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="title">Post Title</label>
+      <input id="title" formControlName="title" placeholder="Enter new title" />
+    </div>
+    <div class="form-group">
+      <label for="body">Post Body</label>
+      <textarea
+        id="body"
+        formControlName="body"
+        placeholder="Enter new body"
+        rows="5"
+      ></textarea>
+    </div>
+    <div class="modal-actions">
+      <button type="submit" [disabled]="editForm.invalid">Save</button>
+      <button type="button" (click)="closeModal()">Cancel</button>
+    </div>
+  </form>
+</div>

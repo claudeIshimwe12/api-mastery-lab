@@ -1,0 +1,27 @@
+<nav class="navbar flex justify-between">
+  <h1>Logo</h1>
+  <ul class="flex justify-between gap-4">
+    <li class="text-hover-secondary">
+      <a
+        routerLink=""
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="link"
+        >Home
+      </a>
+    </li>
+    <li class="1 text-hover-secondary">
+      <a
+        routerLink="/my-posts"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="link"
+        >My Posts
+      </a>
+    </li>
+  </ul>
+  <div class="add-btn" (click)="onCreate()">
+    <img src="assets/images/icon-plus.svg" alt="plus icon" />
+    <span>New</span>
+  </div>
+</nav>

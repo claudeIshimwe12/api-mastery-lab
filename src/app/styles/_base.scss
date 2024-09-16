@@ -1,0 +1,36 @@
+// import google font
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+
+/* reset styles */
+* {
+  color: inherit;
+  margin: 0;
+}
+body {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #f4f4f4;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+hr {
+  border: 0;
+  border-top: 1px dotted #efefef;
+}
+
+img {
+  max-width: 100%;
+}
+
+.test {
+  color: $primary;
+}

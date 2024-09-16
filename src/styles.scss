@@ -1,1 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+// variables & functions
+@import "./app/styles/variables";
+
+// base & layout
+@import "./app/styles/base";
+.navbar {
+  padding: calc($base-padding / 4) $base-padding * 8;
+  box-shadow: $base-box-shadow;
+  margin-bottom: $base-margin;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  .container {
+    display: flex;
+  }
+}
+.justify-between {
+  display: flex;
+  justify-content: space-between;
+  .container {
+    justify-content: space-between;
+  }
+}
+.gap-4 {
+  gap: 1rem;
+}
+.z-50 {
+  z-index: 50;
+}
+.active {
+  padding-bottom: $base-padding;
+  border-bottom: $base-border-thickness * 2 solid $primary;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: calc($base-padding) $base-padding * 2;
+  }
+}
