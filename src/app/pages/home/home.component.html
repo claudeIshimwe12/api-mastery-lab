@@ -3,11 +3,11 @@
     <div class="content-box" (click)="onPostClick(post.id, $event)">
       <h1 class="content-heading">{{ post.title }}</h1>
       <p class="content-paragraph">{{ post.body }}</p>
-      <div>
-        <button (click)="openEditModal($event, post.id)" class="z-50">
+      <div class="content-buttons">
+        <button (click)="openEditModal($event, post.id)" class="z-50 edit">
           Edit
         </button>
-        <button (click)="delete(post.id)" class="z-50">Delete</button>
+        <button (click)="delete(post.id)" class="z-50 delete">Delete</button>
       </div>
     </div>
   </div>

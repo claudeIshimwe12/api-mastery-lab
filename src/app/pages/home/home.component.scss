@@ -1,4 +1,5 @@
 // Variables for colors and font sizes
+@import "../../styles/variables";
 $primary-color: #3498db;
 $secondary-color: #67997c;
 $text-color: #333;
@@ -15,14 +16,31 @@ $paragraph-font-size: 0.4rem;
   max-width: 300px;
 
   .content-heading {
-    font-size: $heading-font-size;
+    font-size: $base-font-size * 1.2;
     color: $secondary-color;
     margin-bottom: 10px;
   }
 
   .content-paragraph {
-    font-size: $paragraph-font-size;
+    font-size: $base-font-size;
     color: $text-color;
+  }
+  .content-buttons {
+    button {
+      border: none;
+      margin-right: $base-margin;
+      margin-top: $base-margin * 2;
+      padding: $base-padding / 2;
+
+      border-radius: 8px;
+    }
+  }
+  .delete {
+    background-color: $error;
+    color: white;
+  }
+  .edit {
+    color: $secondary;
   }
 }
 .products-container {
